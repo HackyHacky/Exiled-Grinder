@@ -16,18 +16,20 @@ end
 
 
 local function UpdateExiledStatus()
-    while Interface.Parent do
-        local exiled: Model = workspace.NPCs:FindFirstChild("The Exiled")
-        if exiled then
-            exiledStatus.LabelStatus.Text = "There's an Exiled Boss in this server!"
-            exiledStatus.LabelStatus.TextColor3 = Color3.fromRGB(80, 255, 80)
-        else
-            exiledStatus.LabelStatus.Text = "There's no Exiled Boss in this server."
-            exiledStatus.LabelStatus.TextColor3 = Color3.fromRGB(255, 80, 80)
+    task.spawn(function()
+        while Interface.Parent do
+            local exiled: Model = workspace.NPCs:FindFirstChild("The Exiled")
+            if exiled then
+                exiledStatus.LabelStatus.Text = "There's an Exiled Boss in this server!"
+                exiledStatus.LabelStatus.TextColor3 = Color3.fromRGB(80, 255, 80)
+            else
+                exiledStatus.LabelStatus.Text = "There's no Exiled Boss in this server."
+                exiledStatus.LabelStatus.TextColor3 = Color3.fromRGB(255, 80, 80)
+            end
+    
+            task.wait(1)
         end
-
-        task.wait(1)
-    end
+    end)
 end
 
 
