@@ -13,9 +13,9 @@
     * Exiled Tracker **WIP**
     * Flee from Exiled
 * Alchemist Helper
-    * Wanted/Good Alchemist teleport
+    * Teleport to Wanted/Good Alchemist
 * Metal Worker Helper
-    * Wanted/Good Metal Worker teleport
+    * Teleport to Wanted/Good Metal Worker
 * Server Helper
     * Rejoin server
     * Server hop
