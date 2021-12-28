@@ -1,6 +1,6 @@
 ## Script
 ```lua
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/HackyHacky/Exiled-Grinder/master/ExiledGrinderRuntime.lua))()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/HackyHacky/Exiled-Grinder/master/ExiledGrinderRuntime.lua"))()
 ```
 
 
