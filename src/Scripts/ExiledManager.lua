@@ -50,7 +50,7 @@ end
 
 
 local function Flee()
-    TeleportPlayer(CFrame.new(0, 1000, 0))
+    TeleportPlayer(CFrame.new(-17277, 1000, -2828))
 end
 
 
