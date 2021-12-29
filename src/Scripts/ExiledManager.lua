@@ -5,7 +5,8 @@ local player = Players.LocalPlayer
 local exiledStatus = Interface.FrameMain.FrameExiledStatus
 local exiledButtons = Interface.FrameMain.FrameExiledButtons
 
-local function TeleportPlayer(cframe)
+
+local function TeleportPlayer(cframe: CFrame)
     if player.Character then
         local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
         if rootPart then
@@ -33,7 +34,7 @@ local function UpdateExiledStatus()
 end
 
 
-local function TeleportToExiled(safeTeleport)
+local function TeleportToExiled(safeTeleport: boolean)
     local exiled: Model = workspace.NPCs:FindFirstChild("The Exiled")
     if not exiled then
         return

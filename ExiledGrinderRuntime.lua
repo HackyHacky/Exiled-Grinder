@@ -1,5 +1,6 @@
 if Initialized then
     Interface:Destroy()
+    getgenv().Interface = nil
 end
 
 
@@ -20,5 +21,6 @@ LoadURL("https://raw.githubusercontent.com/HackyHacky/Exiled-Grinder/master/src/
 AwaitInterface()
 
 LoadURL("https://raw.githubusercontent.com/HackyHacky/Exiled-Grinder/master/src/Scripts/ExiledManager.lua")
+LoadURL("https://raw.githubusercontent.com/HackyHacky/Exiled-Grinder/master/src/Scripts/AlchemistManager.lua")
 
 getgenv().Initialized = true
