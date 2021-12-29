@@ -20,7 +20,7 @@ local function TeleportToMetalWorker(wantedMetalWorker: boolean)
     local function FindMetalWorker(): Model
         for _, v in ipairs(workspace.NPCs:GetDescendants()) do
             if v:IsA("TextLabel") then
-                if v.Text == "Wanted MetalWorker" and wantedMetalWorker or v.Text == "MetalWorker" and not wantedMetalWorker then
+                if v.Text == "Wanted Metalworker" and wantedMetalWorker or v.Text == "Metalworker" and not wantedMetalWorker then
                     return v:FindFirstAncestorWhichIsA("Model")
                 end
             end
