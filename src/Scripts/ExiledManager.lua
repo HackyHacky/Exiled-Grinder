@@ -41,7 +41,7 @@ local function TeleportToExiled(safeTeleport: boolean)
     end
 
     if safeTeleport then
-        local teleportCFrame = exiled.PrimaryPart.CFrame + Vector3.new(100, 500, 100)
+        local teleportCFrame = exiled.PrimaryPart.CFrame + Vector3.new(250, 500, 250)
         TeleportPlayer(teleportCFrame)
     else
         TeleportPlayer(exiled.PrimaryPart.CFrame)
@@ -57,6 +57,6 @@ end
 UpdateExiledStatus()
 
 
-exiledButtons.FrameOptions.FrameRow1.ButtonTeleport.MouseButton1Down:Connect(TeleportToExiled)
+exiledButtons.FrameOptions.FrameRow1.ButtonTeleport.MouseButton1Down:Connect(function() TeleportToExiled(false) end)
 exiledButtons.FrameOptions.FrameRow1.ButtonSafeTeleport.MouseButton1Down:Connect(function() TeleportToExiled(true) end)
 exiledButtons.FrameOptions.FrameRow2.ButtonFlee.MouseButton1Down:Connect(Flee)
