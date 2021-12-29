@@ -14,8 +14,8 @@ end
 
 local function ServerHop()
     
-    local function GetServerJobIds(): Array<number>
-        local serverJobIds = {}
+    local function GetServerJobIds()
+        local serverJobIds: Array<number> = {}
         local serversData = HttpService:JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/3272915504/servers/Public?sortOrder=Asc&limit=100")).data
         for _, server in ipairs(serversData) do
             if type(server) == "table" and server.id ~= game.JobId and server.maxPlayers > server.playing then
