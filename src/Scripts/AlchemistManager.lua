@@ -20,7 +20,11 @@ local function TeleportToAlchemist(wantedAlchemist: boolean)
     local function FindAlchemist(): Model
         for _, v in ipairs(workspace.NPCs:GetDescendants()) do
             if v:IsA("TextLabel") then
-                if v.Text:match("Wanted Alchemist") and wantedAlchemist or v.Text == "Alchemist" and not wantedAlchemist then
+                if v.Text:match("Wanted Alchemist") and wantedAlchemist then
+                    return v:FindFirstAncestorWhichIsA("Model")
+                end
+
+                if v.Text == "Alchemist" and not wantedAlchemist then
                     return v:FindFirstAncestorWhichIsA("Model")
                 end
             end
