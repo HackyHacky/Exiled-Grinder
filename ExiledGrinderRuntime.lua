@@ -22,5 +22,7 @@ AwaitInterface()
 
 LoadURL("https://raw.githubusercontent.com/HackyHacky/Exiled-Grinder/master/src/Scripts/ExiledManager.lua")
 LoadURL("https://raw.githubusercontent.com/HackyHacky/Exiled-Grinder/master/src/Scripts/AlchemistManager.lua")
+LoadURL("https://raw.githubusercontent.com/HackyHacky/Exiled-Grinder/master/src/Scripts/MetalworkerManager.lua")
+LoadURL("https://raw.githubusercontent.com/HackyHacky/Exiled-Grinder/master/src/Scripts/ServerManager.lua")
 
 getgenv().Initialized = true
