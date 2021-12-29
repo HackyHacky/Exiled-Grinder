@@ -6,7 +6,7 @@ local exiledStatus = Interface.FrameMain.FrameExiledStatus
 local exiledButtons = Interface.FrameMain.FrameExiledButtons
 
 
-local function TeleportPlayer(cframe)
+local function TeleportPlayer(cframe: CFrame)
     if player.Character then
         local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
         if rootPart then
@@ -19,7 +19,7 @@ end
 local function UpdateExiledStatus()
     task.spawn(function()
         while Interface.Parent do
-            local exiled = workspace.NPCs:FindFirstChild("The Exiled")
+            local exiled: Model = workspace.NPCs:FindFirstChild("The Exiled")
             if exiled then
                 exiledStatus.LabelStatus.Text = "There's an Exiled Boss in this server!"
                 exiledStatus.LabelStatus.TextColor3 = Color3.fromRGB(80, 255, 80)
@@ -34,8 +34,8 @@ local function UpdateExiledStatus()
 end
 
 
-local function TeleportToExiled(safeTeleport)
-    local exiled = workspace.NPCs:FindFirstChild("The Exiled")
+local function TeleportToExiled(safeTeleport: boolean)
+    local exiled: Model = workspace.NPCs:FindFirstChild("The Exiled")
     if not exiled then
         return
     end

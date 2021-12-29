@@ -342,7 +342,7 @@ UIListLayout_7.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout_7.VerticalAlignment = Enum.VerticalAlignment.Center
 UIListLayout_7.Padding = UDim.new(0, 10)
 
-ButtonWanted.Name = "ButtonWanted"
+ButtonWanted.Name = "ButtonEvil"
 ButtonWanted.Parent = FrameRow1_3
 ButtonWanted.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 ButtonWanted.BorderColor3 = Color3.fromRGB(5, 5, 5)
