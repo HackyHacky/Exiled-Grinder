@@ -5,7 +5,7 @@ local player = Players.LocalPlayer
 local metalWorkerButtons = Interface.FrameMain.FrameMetalWorkerButtons
 
 
-local function TeleportPlayer(cframe: CFrame)
+local function TeleportPlayer(cframe)
     if player.Character then
         local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
         if rootPart then
@@ -15,9 +15,9 @@ local function TeleportPlayer(cframe: CFrame)
 end
 
 
-local function TeleportToMetalWorker(wantedMetalWorker: boolean)
+local function TeleportToMetalWorker(wantedMetalWorker)
     
-    local function FindMetalWorker(): Model
+    local function FindMetalWorker()
         for _, v in ipairs(workspace.NPCs:GetDescendants()) do
             if v:IsA("TextLabel") then
                 if v.Text == "Wanted Metalworker" and wantedMetalWorker or v.Text == "Metalworker" and not wantedMetalWorker then
@@ -27,7 +27,7 @@ local function TeleportToMetalWorker(wantedMetalWorker: boolean)
         end
     end
 
-    local metalWorker: Model = FindMetalWorker()
+    local metalWorker = FindMetalWorker()
     if metalWorker then
         local teleportCFrame = metalWorker.PrimaryPart.CFrame + Vector3.new(0, 500, 0)
         TeleportPlayer(teleportCFrame)

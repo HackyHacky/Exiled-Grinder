@@ -5,7 +5,7 @@ local player = Players.LocalPlayer
 local alchemistButtons = Interface.FrameMain.FrameAlchemistButtons
 
 
-local function TeleportPlayer(cframe: CFrame)
+local function TeleportPlayer(cframe)
     if player.Character then
         local rootPart = player.Character:FindFirstChild("HumanoidRootPart")
         if rootPart then
@@ -15,9 +15,9 @@ local function TeleportPlayer(cframe: CFrame)
 end
 
 
-local function TeleportToAlchemist(wantedAlchemist: boolean)
+local function TeleportToAlchemist(wantedAlchemist)
     
-    local function FindAlchemist(): Model
+    local function FindAlchemist()
         for _, v in ipairs(workspace.NPCs:GetDescendants()) do
             if v:IsA("TextLabel") then
                 if v.Text == "Wanted Alchemist" and wantedAlchemist or v.Text == "Alchemist" and not wantedAlchemist then
@@ -27,7 +27,7 @@ local function TeleportToAlchemist(wantedAlchemist: boolean)
         end
     end
 
-    local alchemist: Model = FindAlchemist()
+    local alchemist = FindAlchemist()
     if alchemist then
         local teleportCFrame = alchemist.PrimaryPart.CFrame + Vector3.new(0, 500, 0)
         TeleportPlayer(teleportCFrame)
